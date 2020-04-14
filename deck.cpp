@@ -28,6 +28,7 @@ Card Deck::dealCard(){
     Card c = myCards[myIndex];
     myIndex++;
     return c;
+
 }
 
 int Deck::size() const{
