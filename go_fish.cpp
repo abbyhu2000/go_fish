@@ -1,6 +1,7 @@
 // FILE: card_demo.cpp
 // This is a small demonstration program showing how the Card and Deck classes are used.
 #include <iostream>    // Provides cout and cin
+#include <fstream>
 #include <cstdlib>     // Provides EXIT_SUCCESS
 #include "card.h"
 #include "player.h"
@@ -14,9 +15,12 @@ void dealHand(Deck &d, Player &p, int numCards);
 
 
 
-
 int main( )
 {
+    ofstream oFile;
+    oFile.open("test.out");
+    oFile << "Go Fish Game" << endl;
+
     int numCards = 5;
 
     Player p1("Joe");
@@ -33,7 +37,6 @@ int main( )
 
     return EXIT_SUCCESS;
 }
-
 
 
 void dealHand(Deck &d, Player &p, int numCards)

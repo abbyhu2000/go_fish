@@ -42,10 +42,10 @@ RM = "C:\Users\jezzy\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\jezzy\go_fish
+CMAKE_SOURCE_DIR = C:\Users\jezzy\go_fish2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\jezzy\go_fish\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\jezzy\go_fish2\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/go_fish.dir/depend.make
@@ -59,58 +59,58 @@ include CMakeFiles/go_fish.dir/flags.make
 CMakeFiles/go_fish.dir/card.cpp.obj: CMakeFiles/go_fish.dir/flags.make
 CMakeFiles/go_fish.dir/card.cpp.obj: CMakeFiles/go_fish.dir/includes_CXX.rsp
 CMakeFiles/go_fish.dir/card.cpp.obj: ../card.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jezzy\go_fish\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/go_fish.dir/card.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\go_fish.dir\card.cpp.obj -c C:\Users\jezzy\go_fish\card.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jezzy\go_fish2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/go_fish.dir/card.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\go_fish.dir\card.cpp.obj -c C:\Users\jezzy\go_fish2\card.cpp
 
 CMakeFiles/go_fish.dir/card.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/go_fish.dir/card.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jezzy\go_fish\card.cpp > CMakeFiles\go_fish.dir\card.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jezzy\go_fish2\card.cpp > CMakeFiles\go_fish.dir\card.cpp.i
 
 CMakeFiles/go_fish.dir/card.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/go_fish.dir/card.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jezzy\go_fish\card.cpp -o CMakeFiles\go_fish.dir\card.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jezzy\go_fish2\card.cpp -o CMakeFiles\go_fish.dir\card.cpp.s
 
 CMakeFiles/go_fish.dir/deck.cpp.obj: CMakeFiles/go_fish.dir/flags.make
 CMakeFiles/go_fish.dir/deck.cpp.obj: CMakeFiles/go_fish.dir/includes_CXX.rsp
 CMakeFiles/go_fish.dir/deck.cpp.obj: ../deck.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jezzy\go_fish\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/go_fish.dir/deck.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\go_fish.dir\deck.cpp.obj -c C:\Users\jezzy\go_fish\deck.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jezzy\go_fish2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/go_fish.dir/deck.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\go_fish.dir\deck.cpp.obj -c C:\Users\jezzy\go_fish2\deck.cpp
 
 CMakeFiles/go_fish.dir/deck.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/go_fish.dir/deck.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jezzy\go_fish\deck.cpp > CMakeFiles\go_fish.dir\deck.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jezzy\go_fish2\deck.cpp > CMakeFiles\go_fish.dir\deck.cpp.i
 
 CMakeFiles/go_fish.dir/deck.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/go_fish.dir/deck.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jezzy\go_fish\deck.cpp -o CMakeFiles\go_fish.dir\deck.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jezzy\go_fish2\deck.cpp -o CMakeFiles\go_fish.dir\deck.cpp.s
 
 CMakeFiles/go_fish.dir/go_fish.cpp.obj: CMakeFiles/go_fish.dir/flags.make
 CMakeFiles/go_fish.dir/go_fish.cpp.obj: CMakeFiles/go_fish.dir/includes_CXX.rsp
 CMakeFiles/go_fish.dir/go_fish.cpp.obj: ../go_fish.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jezzy\go_fish\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/go_fish.dir/go_fish.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\go_fish.dir\go_fish.cpp.obj -c C:\Users\jezzy\go_fish\go_fish.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jezzy\go_fish2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/go_fish.dir/go_fish.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\go_fish.dir\go_fish.cpp.obj -c C:\Users\jezzy\go_fish2\go_fish.cpp
 
 CMakeFiles/go_fish.dir/go_fish.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/go_fish.dir/go_fish.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jezzy\go_fish\go_fish.cpp > CMakeFiles\go_fish.dir\go_fish.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jezzy\go_fish2\go_fish.cpp > CMakeFiles\go_fish.dir\go_fish.cpp.i
 
 CMakeFiles/go_fish.dir/go_fish.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/go_fish.dir/go_fish.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jezzy\go_fish\go_fish.cpp -o CMakeFiles\go_fish.dir\go_fish.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jezzy\go_fish2\go_fish.cpp -o CMakeFiles\go_fish.dir\go_fish.cpp.s
 
 CMakeFiles/go_fish.dir/player.cpp.obj: CMakeFiles/go_fish.dir/flags.make
 CMakeFiles/go_fish.dir/player.cpp.obj: CMakeFiles/go_fish.dir/includes_CXX.rsp
 CMakeFiles/go_fish.dir/player.cpp.obj: ../player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jezzy\go_fish\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/go_fish.dir/player.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\go_fish.dir\player.cpp.obj -c C:\Users\jezzy\go_fish\player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\jezzy\go_fish2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/go_fish.dir/player.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\go_fish.dir\player.cpp.obj -c C:\Users\jezzy\go_fish2\player.cpp
 
 CMakeFiles/go_fish.dir/player.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/go_fish.dir/player.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jezzy\go_fish\player.cpp > CMakeFiles\go_fish.dir\player.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\jezzy\go_fish2\player.cpp > CMakeFiles\go_fish.dir\player.cpp.i
 
 CMakeFiles/go_fish.dir/player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/go_fish.dir/player.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jezzy\go_fish\player.cpp -o CMakeFiles\go_fish.dir\player.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\jezzy\go_fish2\player.cpp -o CMakeFiles\go_fish.dir\player.cpp.s
 
 # Object files for target go_fish
 go_fish_OBJECTS = \
@@ -130,7 +130,7 @@ go_fish.exe: CMakeFiles/go_fish.dir/build.make
 go_fish.exe: CMakeFiles/go_fish.dir/linklibs.rsp
 go_fish.exe: CMakeFiles/go_fish.dir/objects1.rsp
 go_fish.exe: CMakeFiles/go_fish.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\jezzy\go_fish\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable go_fish.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\jezzy\go_fish2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable go_fish.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\go_fish.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -143,6 +143,6 @@ CMakeFiles/go_fish.dir/clean:
 .PHONY : CMakeFiles/go_fish.dir/clean
 
 CMakeFiles/go_fish.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\jezzy\go_fish C:\Users\jezzy\go_fish C:\Users\jezzy\go_fish\cmake-build-debug C:\Users\jezzy\go_fish\cmake-build-debug C:\Users\jezzy\go_fish\cmake-build-debug\CMakeFiles\go_fish.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\jezzy\go_fish2 C:\Users\jezzy\go_fish2 C:\Users\jezzy\go_fish2\cmake-build-debug C:\Users\jezzy\go_fish2\cmake-build-debug C:\Users\jezzy\go_fish2\cmake-build-debug\CMakeFiles\go_fish.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/go_fish.dir/depend
 

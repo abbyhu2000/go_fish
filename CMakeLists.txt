@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.15)
-project(go_fish)
+project(go_fish2)
 
 set(CMAKE_CXX_STANDARD 14)
 
 include_directories(.)
 
-add_executable(go_fish
+add_executable(go_fish2
         card.cpp
         card.h
         deck.cpp

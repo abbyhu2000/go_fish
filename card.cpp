@@ -19,7 +19,7 @@ string Card::toString() const{
     string s = suitString(mySuit);
     string r = rankString(myRank);
 
-    return(s + r);
+    return(r + s);
 }
 
 bool Card::sameSuitAs(const Card& c) const{

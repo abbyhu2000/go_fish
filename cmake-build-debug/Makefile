@@ -47,10 +47,10 @@ RM = "C:\Users\jezzy\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\jezzy\go_fish
+CMAKE_SOURCE_DIR = C:\Users\jezzy\go_fish2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\jezzy\go_fish\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\jezzy\go_fish2\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -79,9 +79,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jezzy\go_fish\cmake-build-debug\CMakeFiles C:\Users\jezzy\go_fish\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jezzy\go_fish2\cmake-build-debug\CMakeFiles C:\Users\jezzy\go_fish2\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jezzy\go_fish\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jezzy\go_fish2\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -110,17 +110,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named go_fish
+# Target rules for targets named go_fish2
 
 # Build rule for target.
-go_fish: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 go_fish
-.PHONY : go_fish
+go_fish2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 go_fish2
+.PHONY : go_fish2
 
 # fast build rule for target.
-go_fish/fast:
-	$(MAKE) -f CMakeFiles\go_fish.dir\build.make CMakeFiles/go_fish.dir/build
-.PHONY : go_fish/fast
+go_fish2/fast:
+	$(MAKE) -f CMakeFiles\go_fish2.dir\build.make CMakeFiles/go_fish2.dir/build
+.PHONY : go_fish2/fast
 
 card.obj: card.cpp.obj
 
@@ -128,7 +128,7 @@ card.obj: card.cpp.obj
 
 # target to build an object file
 card.cpp.obj:
-	$(MAKE) -f CMakeFiles\go_fish.dir\build.make CMakeFiles/go_fish.dir/card.cpp.obj
+	$(MAKE) -f CMakeFiles\go_fish2.dir\build.make CMakeFiles/go_fish2.dir/card.cpp.obj
 .PHONY : card.cpp.obj
 
 card.i: card.cpp.i
@@ -137,7 +137,7 @@ card.i: card.cpp.i
 
 # target to preprocess a source file
 card.cpp.i:
-	$(MAKE) -f CMakeFiles\go_fish.dir\build.make CMakeFiles/go_fish.dir/card.cpp.i
+	$(MAKE) -f CMakeFiles\go_fish2.dir\build.make CMakeFiles/go_fish2.dir/card.cpp.i
 .PHONY : card.cpp.i
 
 card.s: card.cpp.s
@@ -146,7 +146,7 @@ card.s: card.cpp.s
 
 # target to generate assembly for a file
 card.cpp.s:
-	$(MAKE) -f CMakeFiles\go_fish.dir\build.make CMakeFiles/go_fish.dir/card.cpp.s
+	$(MAKE) -f CMakeFiles\go_fish2.dir\build.make CMakeFiles/go_fish2.dir/card.cpp.s
 .PHONY : card.cpp.s
 
 deck.obj: deck.cpp.obj
@@ -155,7 +155,7 @@ deck.obj: deck.cpp.obj
 
 # target to build an object file
 deck.cpp.obj:
-	$(MAKE) -f CMakeFiles\go_fish.dir\build.make CMakeFiles/go_fish.dir/deck.cpp.obj
+	$(MAKE) -f CMakeFiles\go_fish2.dir\build.make CMakeFiles/go_fish2.dir/deck.cpp.obj
 .PHONY : deck.cpp.obj
 
 deck.i: deck.cpp.i
@@ -164,7 +164,7 @@ deck.i: deck.cpp.i
 
 # target to preprocess a source file
 deck.cpp.i:
-	$(MAKE) -f CMakeFiles\go_fish.dir\build.make CMakeFiles/go_fish.dir/deck.cpp.i
+	$(MAKE) -f CMakeFiles\go_fish2.dir\build.make CMakeFiles/go_fish2.dir/deck.cpp.i
 .PHONY : deck.cpp.i
 
 deck.s: deck.cpp.s
@@ -173,7 +173,7 @@ deck.s: deck.cpp.s
 
 # target to generate assembly for a file
 deck.cpp.s:
-	$(MAKE) -f CMakeFiles\go_fish.dir\build.make CMakeFiles/go_fish.dir/deck.cpp.s
+	$(MAKE) -f CMakeFiles\go_fish2.dir\build.make CMakeFiles/go_fish2.dir/deck.cpp.s
 .PHONY : deck.cpp.s
 
 go_fish.obj: go_fish.cpp.obj
@@ -182,7 +182,7 @@ go_fish.obj: go_fish.cpp.obj
 
 # target to build an object file
 go_fish.cpp.obj:
-	$(MAKE) -f CMakeFiles\go_fish.dir\build.make CMakeFiles/go_fish.dir/go_fish.cpp.obj
+	$(MAKE) -f CMakeFiles\go_fish2.dir\build.make CMakeFiles/go_fish2.dir/go_fish.cpp.obj
 .PHONY : go_fish.cpp.obj
 
 go_fish.i: go_fish.cpp.i
@@ -191,7 +191,7 @@ go_fish.i: go_fish.cpp.i
 
 # target to preprocess a source file
 go_fish.cpp.i:
-	$(MAKE) -f CMakeFiles\go_fish.dir\build.make CMakeFiles/go_fish.dir/go_fish.cpp.i
+	$(MAKE) -f CMakeFiles\go_fish2.dir\build.make CMakeFiles/go_fish2.dir/go_fish.cpp.i
 .PHONY : go_fish.cpp.i
 
 go_fish.s: go_fish.cpp.s
@@ -200,7 +200,7 @@ go_fish.s: go_fish.cpp.s
 
 # target to generate assembly for a file
 go_fish.cpp.s:
-	$(MAKE) -f CMakeFiles\go_fish.dir\build.make CMakeFiles/go_fish.dir/go_fish.cpp.s
+	$(MAKE) -f CMakeFiles\go_fish2.dir\build.make CMakeFiles/go_fish2.dir/go_fish.cpp.s
 .PHONY : go_fish.cpp.s
 
 player.obj: player.cpp.obj
@@ -209,7 +209,7 @@ player.obj: player.cpp.obj
 
 # target to build an object file
 player.cpp.obj:
-	$(MAKE) -f CMakeFiles\go_fish.dir\build.make CMakeFiles/go_fish.dir/player.cpp.obj
+	$(MAKE) -f CMakeFiles\go_fish2.dir\build.make CMakeFiles/go_fish2.dir/player.cpp.obj
 .PHONY : player.cpp.obj
 
 player.i: player.cpp.i
@@ -218,7 +218,7 @@ player.i: player.cpp.i
 
 # target to preprocess a source file
 player.cpp.i:
-	$(MAKE) -f CMakeFiles\go_fish.dir\build.make CMakeFiles/go_fish.dir/player.cpp.i
+	$(MAKE) -f CMakeFiles\go_fish2.dir\build.make CMakeFiles/go_fish2.dir/player.cpp.i
 .PHONY : player.cpp.i
 
 player.s: player.cpp.s
@@ -227,7 +227,7 @@ player.s: player.cpp.s
 
 # target to generate assembly for a file
 player.cpp.s:
-	$(MAKE) -f CMakeFiles\go_fish.dir\build.make CMakeFiles/go_fish.dir/player.cpp.s
+	$(MAKE) -f CMakeFiles\go_fish2.dir\build.make CMakeFiles/go_fish2.dir/player.cpp.s
 .PHONY : player.cpp.s
 
 # Help Target
@@ -236,7 +236,7 @@ help:
 	@echo ... all (the default if no target is provided)
 	@echo ... clean
 	@echo ... depend
-	@echo ... go_fish
+	@echo ... go_fish2
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... card.obj

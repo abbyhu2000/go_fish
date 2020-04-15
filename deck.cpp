@@ -5,9 +5,9 @@
 
 Deck::Deck(){
     myIndex = 0;
-    for(int i=0;i<4;i++){
-        for(int j=1;j<14;j++){
-            myCards[i*13+j-1]=Card(j,(Card::Suit)i);
+    for(int i = 0; i<4; i++){
+        for(int j = 1; j < 14; j++){
+            myCards[i*13+j-1] = Card(j,(Card::Suit)i);
         }
     }
 }
@@ -19,8 +19,8 @@ void Deck::shuffle(){
         long die1 = (rand() % SIZE);
         long die2 = (rand() % SIZE);
         Card tempcard = myCards[die1];
-        myCards[die1]=myCards[die2];
-        myCards[die2]=tempcard;
+        myCards[die1] = myCards[die2];
+        myCards[die2] = tempcard;
     }
 }
 
@@ -32,6 +32,6 @@ Card Deck::dealCard(){
 }
 
 int Deck::size() const{
-    return (SIZE-myIndex);
+    return (SIZE - myIndex);
 }
 
