@@ -1,15 +1,15 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/go_fish.dir/card.cpp.obj"
-  "CMakeFiles/go_fish.dir/deck.cpp.obj"
-  "CMakeFiles/go_fish.dir/go_fish.cpp.obj"
-  "CMakeFiles/go_fish.dir/player.cpp.obj"
-  "go_fish.exe"
-  "go_fish.exe.manifest"
-  "go_fish.pdb"
-  "libgo_fish.dll.a"
+  "CMakeFiles/Go_Fish.dir/card.cpp.obj"
+  "CMakeFiles/Go_Fish.dir/deck.cpp.obj"
+  "CMakeFiles/Go_Fish.dir/go_fish.cpp.obj"
+  "CMakeFiles/Go_Fish.dir/player.cpp.obj"
+  "Go_Fish.exe"
+  "Go_Fish.exe.manifest"
+  "Go_Fish.pdb"
+  "libGo_Fish.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
 foreach(lang CXX)
-  include(CMakeFiles/go_fish.dir/cmake_clean_${lang}.cmake OPTIONAL)
+  include(CMakeFiles/Go_Fish.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

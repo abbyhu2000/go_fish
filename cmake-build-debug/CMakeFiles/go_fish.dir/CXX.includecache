@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/abiga/CLionProjects/Go_Fish/card.h
+iostream
+-
+string
+-
+
+C:/Users/abiga/CLionProjects/Go_Fish/deck.h
+card.h
+C:/Users/abiga/CLionProjects/Go_Fish/card.h
+
+C:/Users/abiga/CLionProjects/Go_Fish/go_fish.cpp
+iostream
+-
+cstdlib
+-
+card.h
+C:/Users/abiga/CLionProjects/Go_Fish/card.h
+player.h
+C:/Users/abiga/CLionProjects/Go_Fish/player.h
+deck.h
+C:/Users/abiga/CLionProjects/Go_Fish/deck.h
+
+C:/Users/abiga/CLionProjects/Go_Fish/player.h
+iostream
+-
+string
+-
+vector
+-
+card.h
+C:/Users/abiga/CLionProjects/Go_Fish/card.h
+
