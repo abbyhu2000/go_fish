@@ -18,7 +18,7 @@ void dealHand(Deck &d, Player &p, int numCards);
 int main( )
 {
     ofstream oFile;
-    oFile.open("test.out");
+    oFile.open("gofish_results.txt");
     oFile << "Go Fish Game" << endl;
 
     int numCards = 5;
