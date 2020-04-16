@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/abiga/CLionProjects/Go_Fish/card.cpp" "C:/Users/abiga/CLionProjects/Go_Fish/cmake-build-debug/CMakeFiles/Go_Fish.dir/card.cpp.obj"
-  "C:/Users/abiga/CLionProjects/Go_Fish/deck.cpp" "C:/Users/abiga/CLionProjects/Go_Fish/cmake-build-debug/CMakeFiles/Go_Fish.dir/deck.cpp.obj"
-  "C:/Users/abiga/CLionProjects/Go_Fish/go_fish.cpp" "C:/Users/abiga/CLionProjects/Go_Fish/cmake-build-debug/CMakeFiles/Go_Fish.dir/go_fish.cpp.obj"
-  "C:/Users/abiga/CLionProjects/Go_Fish/player.cpp" "C:/Users/abiga/CLionProjects/Go_Fish/cmake-build-debug/CMakeFiles/Go_Fish.dir/player.cpp.obj"
+  "C:/Users/jezzy/go_fish3/card.cpp" "C:/Users/jezzy/go_fish3/cmake-build-debug/CMakeFiles/Go_Fish.dir/card.cpp.obj"
+  "C:/Users/jezzy/go_fish3/deck.cpp" "C:/Users/jezzy/go_fish3/cmake-build-debug/CMakeFiles/Go_Fish.dir/deck.cpp.obj"
+  "C:/Users/jezzy/go_fish3/go_fish.cpp" "C:/Users/jezzy/go_fish3/cmake-build-debug/CMakeFiles/Go_Fish.dir/go_fish.cpp.obj"
+  "C:/Users/jezzy/go_fish3/player.cpp" "C:/Users/jezzy/go_fish3/cmake-build-debug/CMakeFiles/Go_Fish.dir/player.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

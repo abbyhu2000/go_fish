@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/jezzy/go_fish3/card.h
+iostream
+-
+string
+-
+
+C:/Users/jezzy/go_fish3/deck.h
+card.h
+C:/Users/jezzy/go_fish3/card.h
+
+C:/Users/jezzy/go_fish3/go_fish.cpp
+iostream
+-
+fstream
+-
+cstdlib
+-
+card.h
+C:/Users/jezzy/go_fish3/card.h
+player.h
+C:/Users/jezzy/go_fish3/player.h
+deck.h
+C:/Users/jezzy/go_fish3/deck.h
+
+C:/Users/jezzy/go_fish3/player.h
+iostream
+-
+string
+-
+vector
+-
+card.h
+C:/Users/jezzy/go_fish3/card.h
+

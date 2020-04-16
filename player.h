@@ -18,46 +18,104 @@ using namespace std;
 class Player
 {
 public:
+
+    //Default constructor
+    //leaves the name blank
     Player();
 
+    //Constructor with name parameter
+    //set the name to the input parameter
     Player(string name);
 
+    /* FUNCTION - string getName() const
+    * Gets the name of the player
+        input parms - None
+        output parms - returns the name as a string
+    */
     string getName() const {
         return myName;
     }
 
-    void addCard(Card c);  //adds a card to the hand
+    /* FUNCTION - void addCard(Card c)
+    * Adds a card to the hand
+        input parms - Card that will be added
+        output parms - None
+    */
+    void addCard(Card c);
+
+    /* FUNCTION - void bookCards(Card c1, Card c2)
+    * Books a pair of card
+        input parms - Cards that will be booked
+        output parms - None
+    */
     void bookCards(Card c1, Card c2);
 
-    //OPTIONAL
-    // comment out if you decide to not use it
-    //this function will check a players hand for a pair.
-    //If a pair is found, it returns true and populates the two variables with the cards tha make the pair.
-
+    /* FUNCTION - bool checkHandForBook(Card &c1, Card &c2)
+    * this function will check a players hand for a pair.
+    * If a pair is found, it returns true and populates the two variables with the cards tha make the pair.
+        input parms - Cards that will be checked if they are pairs
+        output parms - true if pair is found
+                       false if pair is not found
+    */
     bool checkHandForBook(Card &c1, Card &c2);
 
-
-    //OPTIONAL
-    // comment out if you decide to not use it
-    //Does the player have a card with the same rank as c in her hand?
+    /* FUNCTION - bool rankInHand(Card c) const
+    * Does the player have a card with the same rank as c in her hand?
+        input parms - Cards that will be compared to
+        output parms - true if same rank
+                       false if not the same rank
+    */
     bool rankInHand(Card c) const;
 
-    //uses some strategy to choose one card from the player's
-    //hand so they can say "Do you have a 4?"
+    /* FUNCTION - Card chooseCardFromHand() const
+    * uses some strategy to choose one card from the player's
+    * hand so they can say "Do you have a 4?"
+        input parms - None
+        output parms - returns a card from players hand
+    */
     Card chooseCardFromHand() const;
 
-    //Does the player have the card c in her hand?
+    /* FUNCTION - bool cardInHand(Card c) const
+    * Does the player have the card c in her hand?
+        input parms - Card that is checked for
+        output parms - true if player has the card
+                       false if player does not have the card
+   */
     bool cardInHand(Card c) const;
 
-    //Remove the card c from the hand and return it to the caller
+    /* FUNCTION - Card removeCardFromHand(Card c)
+    * Remove the card c from the hand and return it to the caller
+        input parms - Card that will be removed
+        output parms - returns the card that is removed
+    */
     Card removeCardFromHand(Card c);
 
- //   void removeAllCardsSameRank(Card c, Player &p);
-
+    /* FUNCTION - string showHand() const
+    * Converts all of the player's card into one string together
+        input parms - None
+        output parms - returns string of all of the player's cards
+    */
     string showHand() const;
+
+    /* FUNCTION - string showBooks() const
+    * Converts all of the booked cards of the player into one string together
+        input parms - None
+        output parms - returns string of all of the player's booked cards
+    */
     string showBooks() const;
 
+    /* FUNCTION - int getHandSize() const
+    * Gets the number of cards the player has
+        input parms - None
+        output parms - returns the number of cards the player has
+    */
     int getHandSize() const;
+
+    /* FUNCTION - int getBookSize() const
+    * Gets the number of booked pairs the player has
+        input parms - None
+        output parms - returns the number of booked cards the player has
+    */
     int getBookSize() const;
 
     //OPTIONAL

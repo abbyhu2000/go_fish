@@ -34,30 +34,30 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\CLion 2019.3.3\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Users\jezzy\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "D:\CLion 2019.3.3\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "C:\Users\jezzy\CLion 2019.3.4\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\abiga\CLionProjects\Go_Fish
+CMAKE_SOURCE_DIR = C:\Users\jezzy\go_fish3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\abiga\CLionProjects\Go_Fish\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\jezzy\go_fish3\cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Go_Fish.dir/all
+all: CMakeFiles/go_fish3.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Go_Fish.dir/clean
+clean: CMakeFiles/go_fish3.dir/clean
 
 .PHONY : clean
 
@@ -67,31 +67,31 @@ preinstall:
 .PHONY : preinstall
 
 #=============================================================================
-# Target rules for target CMakeFiles/Go_Fish.dir
+# Target rules for target CMakeFiles/go_fish3.dir
 
 # All Build rule for target.
-CMakeFiles/Go_Fish.dir/all:
-	$(MAKE) -f CMakeFiles\Go_Fish.dir\build.make CMakeFiles/Go_Fish.dir/depend
-	$(MAKE) -f CMakeFiles\Go_Fish.dir\build.make CMakeFiles/Go_Fish.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\abiga\CLionProjects\Go_Fish\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5 "Built target Go_Fish"
-.PHONY : CMakeFiles/Go_Fish.dir/all
+CMakeFiles/go_fish3.dir/all:
+	$(MAKE) -f CMakeFiles\go_fish3.dir\build.make CMakeFiles/go_fish3.dir/depend
+	$(MAKE) -f CMakeFiles\go_fish3.dir\build.make CMakeFiles/go_fish3.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\jezzy\go_fish3\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5 "Built target go_fish3"
+.PHONY : CMakeFiles/go_fish3.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Go_Fish.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\abiga\CLionProjects\Go_Fish\cmake-build-debug\CMakeFiles 5
-	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/Go_Fish.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\abiga\CLionProjects\Go_Fish\cmake-build-debug\CMakeFiles 0
-.PHONY : CMakeFiles/Go_Fish.dir/rule
+CMakeFiles/go_fish3.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jezzy\go_fish3\cmake-build-debug\CMakeFiles 5
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/go_fish3.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\jezzy\go_fish3\cmake-build-debug\CMakeFiles 0
+.PHONY : CMakeFiles/go_fish3.dir/rule
 
 # Convenience name for target.
-Go_Fish: CMakeFiles/Go_Fish.dir/rule
+go_fish3: CMakeFiles/go_fish3.dir/rule
 
-.PHONY : Go_Fish
+.PHONY : go_fish3
 
 # clean rule for target.
-CMakeFiles/Go_Fish.dir/clean:
-	$(MAKE) -f CMakeFiles\Go_Fish.dir\build.make CMakeFiles/Go_Fish.dir/clean
-.PHONY : CMakeFiles/Go_Fish.dir/clean
+CMakeFiles/go_fish3.dir/clean:
+	$(MAKE) -f CMakeFiles\go_fish3.dir\build.make CMakeFiles/go_fish3.dir/clean
+.PHONY : CMakeFiles/go_fish3.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

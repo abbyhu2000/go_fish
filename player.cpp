@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <vector>
 #include <ctime>
@@ -26,18 +27,13 @@ using namespace std;
         cout << myName << " booked " << c1.toString() << " and " << c2.toString() << endl;
     }
 
-    //OPTIONAL
-    // comment out if you decide to not use it
-    //this function will check a players hand for a pair.
-    //If a pair is found, it returns true and populates the two variables with the cards tha make the pair.
-
     bool Player::checkHandForBook(Card &c1, Card &c2) {
-        if (myHand.size() > 1) {
-            for (int i = 0; i < myHand.size() - 1; i++) {
-                for (int j = i + 1; j < myHand.size(); j++) {
-                    if (myHand[i].getRank() == myHand[j].getRank()) {
-                        c1=myHand[i];
-                        c2=myHand[j];
+        if(myHand.size() > 1) {
+            for(int i=0; i<myHand.size()-1; i++) {
+                for(int j=i+1; j<myHand.size(); j++) {
+                    if(myHand[i].getRank() == myHand[j].getRank()) {
+                        c1 = myHand[i];
+                        c2 = myHand[j];
                         return true;
                     }
                 }
@@ -47,20 +43,15 @@ using namespace std;
         return false;
     }
 
-    //OPTIONAL
-    // comment out if you decide to not use it
-    //Does the player have a card with the same rank as c in her hand?
     bool Player::rankInHand(Card c) const {
-        for(int i=0;i<myHand.size();i++){
-            if(myHand[i].getRank()==c.getRank()){
+        for(int i=0; i<myHand.size(); i++){
+            if(myHand[i].getRank() == c.getRank()){
                 return true;
             }
         }
         return false;
     }
 
-    //uses some strategy to choose one card from the player's
-    //hand so they can say "Do you have a 4?"
     Card Player::chooseCardFromHand() const {
         Card c;
         int size = myHand.size();
@@ -71,25 +62,22 @@ using namespace std;
         return c;
     }
 
-    //Does the player have the card c in her hand?
     bool Player::cardInHand(Card c) const {
-        for(int i=0; i<myHand.size();i++){
-            if((myHand[i].toString()==c.toString())){
+        for(int i=0; i<myHand.size(); i++){
+            if((myHand[i].toString() == c.toString())){
                 return true;
             }
         }
         return false;
     }
 
-    //Remove the card c from the hand and return it to the caller
     Card Player::removeCardFromHand(Card c) {
         Card deleteCard;
         int index;
-        for(int i=myHand.size()-1;i>=0;i--){
-            if(myHand[i].getRank()==c.getRank()){
+        for(int i=myHand.size()-1; i>=0; i--){
+            if(myHand[i].getRank() == c.getRank()){
                 deleteCard = myHand[i];
                 index = i;
-           //     myHand.erase(myHand.begin()+i);
             }
         }
         myHand.erase(myHand.begin()+index);
@@ -98,7 +86,7 @@ using namespace std;
 
     string Player::showHand() const {
         string s;
-        for(int i=0;i<myHand.size();i++){
+        for(int i=0; i<myHand.size(); i++){
             s += myHand[i].toString();
             s += " ";
         }
@@ -107,7 +95,7 @@ using namespace std;
 
     string Player::showBooks() const {
         string s;
-        for(int i=0;i<myBook.size();i++){
+        for(int i=0; i<myBook.size(); i++){
             s += myBook[i].toString();
             s += " ";
         }
