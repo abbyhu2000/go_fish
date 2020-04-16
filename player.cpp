@@ -1,7 +1,3 @@
-//
-// Created by jezzy on 4/13/2020.
-//
-
 #include <iostream>
 #include <string>
 #include <vector>
@@ -27,6 +23,7 @@ using namespace std;
     void Player::bookCards(Card c1, Card c2) {
         myBook.push_back(c1);
         myBook.push_back(c2);
+        cout << myName << " booked " << c1.toString() << " and " << c2.toString() << endl;
     }
 
     //OPTIONAL
@@ -35,7 +32,19 @@ using namespace std;
     //If a pair is found, it returns true and populates the two variables with the cards tha make the pair.
 
     bool Player::checkHandForBook(Card &c1, Card &c2) {
-        return (c1.getRank()==c2.getRank());
+        if (myHand.size() > 1) {
+            for (int i = 0; i < myHand.size() - 1; i++) {
+                for (int j = i + 1; j < myHand.size(); j++) {
+                    if (myHand[i].getRank() == myHand[j].getRank()) {
+                        c1=myHand[i];
+                        c2=myHand[j];
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        return false;
     }
 
     //OPTIONAL
@@ -73,23 +82,18 @@ using namespace std;
     }
 
     //Remove the card c from the hand and return it to the caller
-    //Remove all cards that have the same rank
     Card Player::removeCardFromHand(Card c) {
+        Card deleteCard;
+        int index;
         for(int i=myHand.size()-1;i>=0;i--){
             if(myHand[i].getRank()==c.getRank()){
-                myHand.erase(myHand.begin()+i);
+                deleteCard = myHand[i];
+                index = i;
+           //     myHand.erase(myHand.begin()+i);
             }
         }
-        return c;
-    }
-
-    void Player :: removeAllCardsSameRank(Card c, Player &p){
-        for(int i=myHand.size()-1;i>=0;i--){
-            if(myHand[i].getRank()==c.getRank()){
-                p.myHand.push_back(myHand[i]);
-                myHand.erase(myHand.begin()+i);
-            }
-        }
+        myHand.erase(myHand.begin()+index);
+        return deleteCard;
     }
 
     string Player::showHand() const {
@@ -123,39 +127,17 @@ using namespace std;
     //this function will check a players hand for a pair.
     //If a pair is found, it returns true and populates the two variables with the cards tha make the pair.
 
-    bool Player::checkHandForPair(Card &c1, Card &c2) {
-
-    }
+//    bool Player::checkHandForPair(Card &c1, Card &c2) {
+//
+//    }
 
     //OPTIONAL
     // comment out if you decide to not use it
     //Does the player have a card with the same rank as c in her hand?
     //e.g. will return true if the player has a 7d and the parameter is 7c
 
-    bool Player::sameRankInHand(Card c) const {
-
-    }
-
-    void Player::checkPairToBook() {
-        if (myHand.size()>1) {
-            Card c(0, Card::clubs);
-            for (int i = 0; i < myHand.size() - 1; i++) {
-                for (int j = i + 1; j < myHand.size(); j++) {
-                    if ((checkHandForBook(myHand[i], myHand[j])) && (myHand[i] != c)) {
-                        myBook.push_back(myHand[i]);
-                        myBook.push_back(myHand[j]);
-                        cout << myName << " booked " << myHand[i].toString() << " and " << myHand[j].toString() << endl;
-                        myHand[i] = c;
-                        myHand[j] = c;
-                    }
-                }
-            }
-            for (int i = myHand.size() - 1; i >= 0; i--) {
-                if (myHand[i] == c) {
-                    myHand.erase(myHand.begin() + i);
-                }
-            }
-        }
-    }
+//    bool Player::sameRankInHand(Card c) const {
+//
+//    }
 
 
