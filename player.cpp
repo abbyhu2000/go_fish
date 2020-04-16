@@ -136,22 +136,24 @@ using namespace std;
 
     }
 
-    void Player::checkPairToBook(){
-        Card c(0,Card::clubs);
-        for(int i=0; i < myHand.size()-1;i++){
-            for(int j=i+1; j < myHand.size();j++){
-                if((checkHandForBook(myHand[i],myHand[j]))&&(myHand[i]!=c)){
-                    myBook.push_back(myHand[i]);
-                    myBook.push_back(myHand[j]);
-                    cout << myName << " booked " << myHand[i].toString() << " and " << myHand[j].toString() << endl;
-                    myHand[i]=c;
-                    myHand[j]=c;
+    void Player::checkPairToBook() {
+        if (myHand.size()>1) {
+            Card c(0, Card::clubs);
+            for (int i = 0; i < myHand.size() - 1; i++) {
+                for (int j = i + 1; j < myHand.size(); j++) {
+                    if ((checkHandForBook(myHand[i], myHand[j])) && (myHand[i] != c)) {
+                        myBook.push_back(myHand[i]);
+                        myBook.push_back(myHand[j]);
+                        cout << myName << " booked " << myHand[i].toString() << " and " << myHand[j].toString() << endl;
+                        myHand[i] = c;
+                        myHand[j] = c;
+                    }
                 }
             }
-        }
-        for(int i=myHand.size()-1;i>=0;i--){
-            if(myHand[i]==c){
-                myHand.erase(myHand.begin()+i);
+            for (int i = myHand.size() - 1; i >= 0; i--) {
+                if (myHand[i] == c) {
+                    myHand.erase(myHand.begin() + i);
+                }
             }
         }
     }

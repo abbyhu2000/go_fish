@@ -81,12 +81,16 @@ int main( )
     //game ends if the total number of book deck size is 52
     while((p1.getBookSize()+p2.getBookSize())!=52){
         cout << endl << endl;
+        cout << "Joe's turn:" << endl;
         p1.checkPairToBook();
         if(p1.getHandSize()==0){
             if(d.size()>0) {
                 Card newCard = d.dealCard();
                 p1.addCard(newCard);
                 cout << "Joe's hand is empty, draws a new card" << newCard.toString() << endl;
+            }
+            else{
+                cout << "The deck is empty!" << endl;
             }
         }
         else{
@@ -96,14 +100,22 @@ int main( )
             cout << p1.getName() <<" 's book has : " << p1.showBooks() << endl;
             Card askCard = p1.chooseCardFromHand();
             cout << "Joe ask Jane for rank " << askCard.getRank() << endl;
+            int indicator =0;
             while(p2.rankInHand(askCard)){
                 cout << "Jane says: Yes, I have a " << askCard.getRank() << endl;
                 p2.removeAllCardsSameRank(askCard,p1);
-                //p1.checkPairToBook();
-                askCard = p1.chooseCardFromHand();
-                cout << "Joe ask Jane for rank " << askCard.getRank() << endl;
+                p1.checkPairToBook();
+                if(p1.getHandSize()!=0) {
+                    askCard = p1.chooseCardFromHand();
+                    cout << "Joe ask Jane for rank " << askCard.getRank() << endl;
+                }
+                else{
+                    indicator =1;
+                }
             }
-            cout << "Jane says: Go! Fish!" << endl;
+            if(indicator==0) {
+                cout << "Jane says: Go! Fish!" << endl;
+            }
             if(d.size()>0) {
                 Card newCard = d.dealCard();
                 p1.addCard(newCard);
@@ -111,13 +123,16 @@ int main( )
             }
         }
 
-
+        cout << endl << "Jane's turn:" << endl;
         p2.checkPairToBook();
         if(p2.getHandSize()==0){
             if(d.size()>0) {
                 Card newCard = d.dealCard();
                 p2.addCard(newCard);
                 cout << "Jane's hand is empty, draws a new card" << newCard.toString() << endl;
+            }
+            else{
+                cout << "The deck is empty!" << endl;
             }
         }
         else{
@@ -127,21 +142,32 @@ int main( )
             cout << p2.getName() <<" 's book has : " << p2.showBooks() << endl;
             Card askCard = p2.chooseCardFromHand();
             cout << "Jane ask Joe for rank " << askCard.getRank() << endl;
+            int indicator =0;
             while(p1.rankInHand(askCard)){
                 cout << "Joe says: Yes, I have a " << askCard.getRank() << endl;
                 p1.removeAllCardsSameRank(askCard,p2);
-                //p1.checkPairToBook();
-                askCard = p2.chooseCardFromHand();
-                cout << "Jane ask Joe for rank " << askCard.getRank() << endl;
+                p2.checkPairToBook();
+                if(p2.getHandSize()!=0) {
+                    askCard = p2.chooseCardFromHand();
+                    cout << "Jane ask Joe for rank " << askCard.getRank() << endl;
+                }
+                else{
+                    indicator =1;
+                }
+            }
+            if(indicator==0) {
+                cout << "Joe says: Go! Fish!" << endl;
             }
             if(d.size()>0) {
                 Card newCard = d.dealCard();
                 p2.addCard(newCard);
-                cout << "Jane's hand is empty, draws a new card" << newCard.toString() << endl;
+                cout << "Jane draws a new card" << newCard.toString() << endl;
             }
         }
     }
 
+    cout << endl << endl;
+    cout << "Game Over!" << endl;
     cout << p1.getName() <<" 's book has : " << p1.showBooks() << endl;
     cout << p2.getName() <<" 's book has : " << p2.showBooks() << endl;
     if(p1.getBookSize()>p2.getBookSize()){

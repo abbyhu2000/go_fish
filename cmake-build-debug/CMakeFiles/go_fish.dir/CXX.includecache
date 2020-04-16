@@ -16,15 +16,19 @@ C:/Users/abiga/CLionProjects/Go_Fish/deck.h
 card.h
 C:/Users/abiga/CLionProjects/Go_Fish/card.h
 
-C:/Users/abiga/CLionProjects/Go_Fish/go_fish.cpp
+C:/Users/abiga/CLionProjects/Go_Fish/player.cpp
 iostream
 -
-cstdlib
+string
 -
-card.h
-C:/Users/abiga/CLionProjects/Go_Fish/card.h
+vector
+-
+ctime
+-
 player.h
 C:/Users/abiga/CLionProjects/Go_Fish/player.h
+card.h
+C:/Users/abiga/CLionProjects/Go_Fish/card.h
 deck.h
 C:/Users/abiga/CLionProjects/Go_Fish/deck.h
 
