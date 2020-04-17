@@ -156,9 +156,9 @@ int main( )
     //when the deck is empty and all pairs have been booked, the player with the most number of booked pairs won
     oFile << endl << endl;
     oFile << "Game Over!" << endl;
-    oFile << p1.getName() << " 's book: " << p1.showBooks() << endl;
+    oFile << p1.getName() << "'s book: " << p1.showBooks() << endl;
     oFile << p1.getName() << " booked " << p1.getBookSize() << " cards." << endl;
-    oFile << p2.getName() << " 's book: " << p2.showBooks() << endl;
+    oFile << p2.getName() << "'s book: " << p2.showBooks() << endl;
     oFile << p2.getName() << " booked " << p2.getBookSize() << " cards." << endl;
     if(p1.getBookSize() > p2.getBookSize()){
         oFile << p1.getName() << " won!" << endl;
