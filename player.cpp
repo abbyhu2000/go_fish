@@ -24,7 +24,6 @@ using namespace std;
     void Player::bookCards(Card c1, Card c2) {
         myBook.push_back(c1);
         myBook.push_back(c2);
-        cout << myName << " booked " << c1.toString() << " and " << c2.toString() << endl;
     }
 
     bool Player::checkHandForBook(Card &c1, Card &c2) {

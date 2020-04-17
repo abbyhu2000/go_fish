@@ -91,14 +91,14 @@ public:
     */
     bool operator != (const Card& rhs) const;
 
-private:
-
     /* FUNCTION - string rankString(int r) const
     * Converts the rank into a string
         input parms - rank of the card
         output parms - return "A", "2", ..."Q"
     */
     string rankString(int r) const;
+
+private:
 
     int myRank;
     Suit mySuit;

@@ -30,21 +30,21 @@ void removeAllCardsSameRank(Card c, Player &findplayer, Player &askplayer);
      input parms - the player
      output parms - None
 */
-void checkPairToBook(Player &player);
+void checkPairToBook(Player &player, ofstream &oFile);
 
 int main( )
 {
     ofstream oFile;
     oFile.open("gofish_results.txt");
-    oFile << "Go Fish Game" << endl;
+    oFile << "Go Fish\n" << endl;
 
     int numCards = 7;
 
     Player p1("Joe");
-    Player p2("Jane");
+    Player p2("Ana");
 
     Deck d;  //create a deck of cards
-    oFile << "There are " << d.size() << "cards in the deck." << endl;
+    oFile << "There are " << d.size() << " cards in the deck." << endl;
     d.shuffle();
 
 
@@ -53,22 +53,22 @@ int main( )
     dealHand(d, p2, numCards);
 
     //show the player's initial hand
-    oFile << p1.getName() <<"'s initial hand has : " << p1.showHand() << endl;
-    oFile << p2.getName() <<"'s initial hand has : " << p2.showHand() << endl;
+    oFile << p1.getName() <<"'s initial hand: " << p1.showHand() << endl;
+    oFile << p2.getName() <<"'s initial hand: " << p2.showHand() << endl;
 
     //game ends if the total number of book deck size is 52 (all pairs have been booked)
     while((p1.getBookSize()+p2.getBookSize()) != 52){
-        oFile << endl << endl;
+        oFile << endl;
         oFile << p1.getName() << "'s turn:" << endl;
         //check pairs of cards at the beginning of the player's turn
-        checkPairToBook(p1);
+        checkPairToBook(p1, oFile);
 
         //if the player's hand is empty, deal a new card and pass this turn
         if(p1.getHandSize() == 0){
             if(d.size() > 0) {
                 Card newCard = d.dealCard();
                 p1.addCard(newCard);
-                oFile << p1.getName() << "'s hand is empty, draws a new card " << newCard.toString() << endl;
+                oFile << p1.getName() << "'s hand is empty, draws a " << newCard.toString() << endl;
             }
             else{
                 //if the deck is empty, do nothing and pass this turn
@@ -78,20 +78,20 @@ int main( )
 
         //if the player's hand is not empty, ask the other player for a random rank
         else{
-            oFile << p1.getName() <<"'s hand has : " << p1.showHand() << endl;
-            oFile << p1.getName() <<"'s book has : " << p1.showBooks() << endl;
+            oFile << p1.getName() <<"'s hand: " << p1.showHand() << endl;
+            oFile << p1.getName() <<"'s book: " << p1.showBooks() << endl;
             Card askCard = p1.chooseCardFromHand();
-            oFile << p1.getName() << " ask " << p2.getName() << " for rank " << askCard.getRank() << endl;
+            oFile << p1.getName() << " asks - Do you have a " << askCard.rankString(askCard.getRank()) << "?" << endl;
             int indicator = 0;
 
             //if the other player has that rank, give all cards with that rank to this player, and keep asking for another rank
             while(p2.rankInHand(askCard)){
-                oFile << p2.getName() << " says: Yes, I have a " << askCard.getRank() << endl;
+                oFile << p2.getName() << " says: Yes, I have a " << askCard.rankString(askCard.getRank()) << "." << endl;
                 removeAllCardsSameRank(askCard,p2,p1);
-                checkPairToBook(p1);
+                checkPairToBook(p1, oFile);
                 if(p1.getHandSize() != 0) {
                     askCard = p1.chooseCardFromHand();
-                    oFile << p1.getName() << " ask " << p2.getName() << " for rank " << askCard.getRank() << endl;
+                    oFile << p1.getName() << " asks - Do you have a " << askCard.rankString(askCard.getRank()) << "?" << endl;
                 }
                 else{
                     indicator = 1;
@@ -100,7 +100,7 @@ int main( )
 
             //if the other player does not have that rank, he says "Go! Fish!"
             if(indicator == 0) {
-                oFile << p2.getName() << " says: Go! Fish!" << endl;
+                oFile << p2.getName() << " says: Go Fish!" << endl;
             }
 
             //this player will draw a new card and end his turn
@@ -113,42 +113,42 @@ int main( )
 
         //Then it is the other player's turn, repeat the same rules
         oFile << endl << p2.getName() << "'s turn:" << endl;
-        checkPairToBook(p2);
+        checkPairToBook(p2, oFile);
         if(p2.getHandSize() == 0){
             if(d.size() > 0) {
                 Card newCard = d.dealCard();
                 p2.addCard(newCard);
-                oFile << p2.getName() << "'s hand is empty, draws a new card " << newCard.toString() << endl;
+                oFile << p2.getName() << "'s hand is empty, draws a " << newCard.toString() << endl;
             }
             else{
                 oFile << "The deck is empty!" << endl;
             }
         }
         else{
-            oFile << p2.getName() <<"'s hand has : " << p2.showHand() << endl;
-            oFile << p2.getName() <<"'s book has : " << p2.showBooks() << endl;
+            oFile << p2.getName() <<"'s hand: " << p2.showHand() << endl;
+            oFile << p2.getName() <<"'s book: " << p2.showBooks() << endl;
             Card askCard = p2.chooseCardFromHand();
-            oFile << p2.getName() << " ask " << p1.getName() << " for rank " << askCard.getRank() << endl;
+            oFile << p2.getName() << " asks - Do you have a " << askCard.rankString(askCard.getRank()) << "?" << endl;
             int indicator = 0;
             while(p1.rankInHand(askCard)){
-                oFile << p1.getName() << " says: Yes, I have a " << askCard.getRank() << endl;
+                oFile << p1.getName() << " says: Yes, I have a " << askCard.rankString(askCard.getRank()) << "." << endl;
                 removeAllCardsSameRank(askCard,p1,p2);
-                checkPairToBook(p2);
+                checkPairToBook(p2, oFile);
                 if(p2.getHandSize() != 0) {
                     askCard = p2.chooseCardFromHand();
-                    oFile << p2.getName() << " ask " << p1.getName() << " for rank " << askCard.getRank() << endl;
+                    oFile << p2.getName() << " asks - Do you have a " << askCard.rankString(askCard.getRank()) << "?" << endl;
                 }
                 else{
                     indicator = 1;
                 }
             }
             if(indicator == 0) {
-                oFile << p1.getName() << " says: Go! Fish!" << endl;
+                oFile << p1.getName() << " says: Go Fish!" << endl;
             }
             if(d.size() > 0) {
                 Card newCard = d.dealCard();
                 p2.addCard(newCard);
-                oFile << p2.getName() << " draws a new card" << newCard.toString() << endl;
+                oFile << p2.getName() << " draws " << newCard.toString() << endl;
             }
         }
     }
@@ -156,8 +156,10 @@ int main( )
     //when the deck is empty and all pairs have been booked, the player with the most number of booked pairs won
     oFile << endl << endl;
     oFile << "Game Over!" << endl;
-    oFile << p1.getName() <<" 's book has : " << p1.showBooks() << endl;
-    oFile << p2.getName() <<" 's book has : " << p2.showBooks() << endl;
+    oFile << p1.getName() << " 's book: " << p1.showBooks() << endl;
+    oFile << p1.getName() << " booked " << p1.getBookSize() << " cards." << endl;
+    oFile << p2.getName() << " 's book: " << p2.showBooks() << endl;
+    oFile << p2.getName() << " booked " << p2.getBookSize() << " cards." << endl;
     if(p1.getBookSize() > p2.getBookSize()){
         oFile << p1.getName() << " won!" << endl;
     }
@@ -187,7 +189,7 @@ void removeAllCardsSameRank(Card c, Player &findplayer, Player &askplayer){
     }
 }
 
-void checkPairToBook(Player &player) {
+void checkPairToBook(Player &player, ofstream &oFile) {
     if (player.getHandSize() > 1) {
         int count = player.getHandSize()/2;
         while(count > 0){
@@ -195,6 +197,7 @@ void checkPairToBook(Player &player) {
             Card card2;
             if(player.checkHandForBook(card1,card2)){
                 player.bookCards(card1,card2);
+                oFile << player.getName() << " books the " << card1.toString() << " and " << card2.toString() << "." << endl;
                 player.removeCardFromHand(card1);
                 player.removeCardFromHand(card2);
             }
